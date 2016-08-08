@@ -1,0 +1,754 @@
+html, body {
+  background: #4285f4;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  font-family: "Helvetica Neue", Arial, Sans;
+}
+
+a {
+  color: #fff;
+  text-decoration : none;
+}
+
+a:hover {
+  text-decoration : underline;
+}
+
+#nav {
+  width: 600px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  margin-top: 200px;
+  left: 50%;
+  margin-left: -300px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+#nav.inactive {
+  opacity: 0;
+}
+
+#nav a {
+  padding: 0.4em 0.8em;
+  border-radius: 0.8em;
+}
+
+#nav a.current,
+#nav a.current:hover {
+  background: #2b70d6;
+  text-decoration: none;
+  cursor: default;
+}
+
+#nav.inactive a,
+#nav.inactive a:hover {
+  text-decoration: none;
+  cursor: default;
+}
+
+#play-nav {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  bottom: 0;
+  text-align: center;
+  font-style: normal !important;
+}
+
+#play-nav a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#play-nav a:hover {
+  opacity: 0.7;
+}
+
+a.c1 {
+  font-style: normal !important;
+}
+
+
+/* common */
+
+#container {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  margin-top: -200px;
+  left: 50%;
+  margin-left: -300px;
+}
+
+#device {
+  background: #222;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+#screen {
+  background: #fff;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+#stand {
+  background: #b8b8b8;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+#foot {
+  background: #ccc;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+#logo {
+  background: #ea4335;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+#link1,
+#link2,
+#link3,
+#link4 {
+  background: #999;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+#hero {
+  background: #fbbc05;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+#image1,
+#image2,
+#image3 {
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+#image1 {
+  background: #34a853;
+}
+
+#image2 {
+  background: #4285f4;
+}
+
+
+#image3 {
+  background: #ea4335;
+}
+
+
+/* desktop */
+
+.desktop #device {
+  top: 0;
+  width: 400px;
+  height: 270px;
+  border-radius: 15px;
+  left: 100px;
+  z-index: 100;
+}
+
+.desktop #screen {
+  width: 350px;
+  height: 220px;
+  top: 25px;
+  left: 25px;
+  z-index: 101;
+}
+
+.desktop #stand {
+  width: 100px;
+  height: 50px;
+  left: 250px;
+  top: 270px;
+  z-index: 98;
+}
+
+.desktop #foot {
+  width: 120px;
+  height: 5px;
+  left: 240px;
+  top: 320px;
+  z-index: 99;
+}
+
+.desktop #logo {
+  width: 50px;
+  height: 15px;
+  left: 40px;
+  top: 10px;
+}
+
+.desktop #link1 {
+  width: 40px;
+  height: 5px;
+  left: 140px;
+  top: 15px;
+}
+
+.desktop #link2 {
+  width: 30px;
+  height: 5px;
+  left: 190px;
+  top: 15px;
+}
+
+.desktop #link3 {
+  width: 40px;
+  height: 5px;
+  left: 230px;
+  top: 15px;
+}
+
+.desktop #link4 {
+  width: 30px;
+  height: 5px;
+  left: 280px;
+  top: 15px;
+}
+
+.desktop #hero {
+  width: 350px;
+  height: 100px;
+  left: 0px;
+  top: 35px;
+}
+
+.desktop #image1 {
+  width: 84px;
+  height: 50px;
+  left: 40px;
+  top: 145px;
+}
+
+.desktop #image2 {
+  width: 84px;
+  height: 50px;
+  left: 133px;
+  top: 145px;
+}
+
+.desktop #image3 {
+  width: 84px;
+  height: 50px;
+  left: 226px;
+  top: 145px;
+}
+
+
+
+/* laptop */
+
+.laptop #device {
+  top: 100px;
+  width: 250px;
+  height: 170px;
+  left: 175px;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
+.laptop #screen {
+  width: 230px;
+  height: 145px;
+  top: 15px;
+  left: 10px;
+}
+
+.laptop #stand {
+  width: 0;
+  height: 0;
+  left: 300px;
+  top: 270px;
+  background: #4285f4;
+}
+
+.laptop #foot {
+  width: 290px;
+  height: 15px;
+  left: 155px;
+  top: 270px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.laptop #logo {
+  width: 35px;
+  height: 12px;
+  left: 20px;
+  top: 10px;
+}
+
+.laptop #link1 {
+  width: 30px;
+  height: 5px;
+  left: 95px;
+  top: 15px;
+}
+
+.laptop #link2 {
+  width: 20px;
+  height: 5px;
+  left: 130px;
+  top: 15px;
+}
+
+.laptop #link3 {
+  width: 30px;
+  height: 5px;
+  left: 155px;
+  top: 15px;
+}
+
+.laptop #link4 {
+  width: 20px;
+  height: 5px;
+  left: 190px;
+  top: 15px;
+}
+
+.laptop #hero {
+  width: 230px;
+  height: 80px;
+  left: 0px;
+  top: 30px;
+}
+
+.laptop #image1 {
+  width: 60px;
+  height: 25px;
+  left: 20px;
+  top: 120px;
+}
+
+.laptop #image2 {
+  width: 60px;
+  height: 25px;
+  left: 85px;
+  top: 120px;
+}
+
+.laptop #image3 {
+  width: 60px;
+  height: 25px;
+  left: 150px;
+  top: 120px;
+}
+
+/* tablet */
+
+.tablet #device {
+  top: 100px;
+  width: 130px;
+  height: 170px;
+  left: 235px;
+  border-radius: 7px;
+}
+
+.tablet #screen {
+  width: 110px;
+  height: 130px;
+  top: 20px;
+  left: 10px;
+}
+
+.tablet #stand {
+  width: 0;
+  height: 0;
+  left: 300px;
+  top: 270px;
+  background: #4285f4;
+}
+
+.tablet #foot {
+  width: 0;
+  height: 0;
+  left: 300px;
+  top: 270px;
+  background: #4285f4;
+}
+
+.tablet #logo {
+  width: 27px;
+  height: 10px;
+  left: 10px;
+  top: 5px;
+}
+
+.tablet #hero {
+  width: 110px;
+  height: 60px;
+  left: 0px;
+  top: 20px;
+}
+
+.tablet #link1 {
+  width: 30px;
+  height: 5px;
+  left: 70px;
+  top: 8px;
+}
+
+.tablet #link2 {
+  width: 30px;
+  height: 5px;
+  left: 70px;
+  top: 8px;
+}
+
+.tablet #link3 {
+  width: 30px;
+  height: 5px;
+  left: 70px;
+  top: 8px;
+}
+
+.tablet #link4 {
+  width: 30px;
+  height: 5px;
+  left: 70px;
+  top: 8px;
+}
+
+.tablet #image1 {
+  width: 43px;
+  height: 31px;
+  left: 10px;
+  top: 85px;
+}
+
+.tablet #image2 {
+  width: 43px;
+  height: 31px;
+  left: 57px;
+  top: 85px;
+}
+
+.tablet #image3 {
+  width: 90px;
+  height: 10px;
+  left: 10px;
+  top: 120px;
+}
+
+
+/* phone */
+
+.phone #device {
+  top: 150px;
+  width: 60px;
+  height: 100px;
+  left: 270px;
+  border-radius: 7px;
+}
+
+.phone #screen {
+  width: 50px;
+  height: 80px;
+  top: 10px;
+  left: 5px;
+}
+
+.phone #stand {
+  width: 0;
+  height: 0;
+  left: 300px;
+  top: 270px;
+  background: #4285f4;
+}
+
+.phone #foot {
+  width: 0;
+  height: 0;
+  left: 300px;
+  top: 250px;
+  background: #4285f4;
+}
+
+.phone #logo {
+  width: 18px;
+  height: 6px;
+  left: 3px;
+  top: 3px;
+}
+
+.phone #link1 {
+  width: 6px;
+  height: 6px;
+  left: 41px;
+  top: 3px;
+}
+
+.phone #link2 {
+  width: 6px;
+  height: 6px;
+  left: 41px;
+  top: 3px;
+}
+
+.phone #link3 {
+  width: 6px;
+  height: 6px;
+  left: 41px;
+  top: 3px;
+}
+
+.phone #link4 {
+  width: 6px;
+  height: 6px;
+  left: 41px;
+  top: 3px;
+}
+
+.phone #hero {
+  width: 50px;
+  height: 45px;
+  left: 0;
+  top: 12px;
+}
+
+.phone #image1 {
+  width: 44px;
+  height: 20px;
+  left: 3px;
+  top: 60px;
+}
+
+.phone #image2 {
+  width: 44px;
+  height: 0;
+  left: 3px;
+  top: 80px;
+}
+
+.phone #image3 {
+  width: 44px;
+  height: 0;
+  left: 3px;
+  top: 80px;
+}
+
+
+
+/* watch */
+
+.watch #device {
+  top: 180px;
+  width: 40px;
+  height: 40px;
+  left: 280px;
+  border-radius: 20px;
+}
+
+.watch #screen {
+  width: 34px;
+  height: 34px;
+  top: 3px;
+  left: 3px;
+  border-radius: 16px;
+}
+
+.watch #stand {
+  width: 16px;
+  height: 160px;
+  left: 292px;
+  top: 120px;
+  background: #222;
+  border-radius: 10px;
+}
+
+.watch #foot {
+  width: 0;
+  height: 0;
+  left: 300px;
+  top: 250px;
+  background: #4285f4;
+}
+
+.watch #hero {
+  width: 30px;
+  height: 30px;
+  left: 2px;
+  top: 2px;
+  border-radius: 15px;
+}
+
+.watch #logo {
+  width: 20px;
+  height: 20px;
+  left: 5px;
+  top: 5px;
+  border-radius: 10px;
+}
+
+.watch #link1 {
+  width: 6px;
+  height: 6px;
+  left: 14px;
+  top: 14px;
+  border-radius: 3px;
+}
+
+.watch #link2 {
+  width: 6px;
+  height: 6px;
+  left: 14px;
+  top: 14px;
+  border-radius: 3px;
+}
+
+
+.watch #link3 {
+  width: 6px;
+  height: 6px;
+  left: 14px;
+  top: 14px;
+  border-radius: 3px;
+}
+
+
+.watch #link4 {
+  width: 6px;
+  height: 6px;
+  left: 14px;
+  top: 14px;
+  border-radius: 3px;
+}
+
+.watch #image1 {
+  width: 20px;
+  height: 20px;
+  left: 5px;
+  top: 5px;
+  border-radius: 10px;
+}
+
+.watch #image2 {
+  width: 20px;
+  height: 20px;
+  left: 5px;
+  top: 5px;
+  border-radius: 10px;
+}
+
+.watch #image3 {
+  width: 20px;
+  height: 20px;
+  left: 5px;
+  top: 5px;
+  border-radius: 10px;
+}
+
+
+
+/* tv */
+
+.tv #device {
+  top: 0;
+  width: 600px;
+  height: 300px;
+  left: 0px;
+  border-radius: 3px;
+}
+
+.tv #screen {
+  width: 460px;
+  height: 280px;
+  top: 10px;
+  left: 70px;
+}
+
+.tv #stand {
+  width: 200px;
+  height: 20px;
+  left: 200px;
+  top: 300px;
+  background: #000;
+}
+
+.tv #foot {
+  width: 300px;
+  height: 5px;
+  left: 150px;
+  top: 320px;
+  background: #222;
+}
+
+.tv #logo {
+  width: 80px;
+  height: 30px;
+  left: 20px;
+  top: 20px;
+}
+
+.tv #link1 {
+  width: 70px;
+  height: 8px;
+  left: 20px;
+  top: 70px;
+}
+
+.tv #link2 {
+  width: 80px;
+  height: 8px;
+  left: 20px;
+  top: 85px;
+}
+
+.tv #link3 {
+  width: 70px;
+  height: 8px;
+  left: 20px;
+  top: 100px;
+}
+
+.tv #link4 {
+  width: 80px;
+  height: 8px;
+  left: 20px;
+  top: 115px;
+}
+
+.tv #hero{
+  width: 319px;
+  height: 158px;
+  left: 119px;
+  top: 20px;
+}
+
+.tv #image1{
+  width: 95px;
+  height: 62px;
+  left: 119px;
+  top: 198px;
+}
+
+.tv #image2{
+  width: 95px;
+  height: 62px;
+  left: 232px;
+  top: 198px;
+}
+
+.tv #image3{
+  width: 95px;
+  height: 62px;
+  left: 345px;
+  top: 198px;
+}
